@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:neon_ui_design/screens/home_screen.dart';
 import 'package:neon_ui_design/screens/onboarding_screen.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: GoogleFonts.openSans().fontFamily,
       ),
-      home: const OnboardingScreen(),
+      home: const HomeScreen(),
     );
   }
 }
