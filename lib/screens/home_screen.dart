@@ -211,6 +211,52 @@ class _HomeScreenState extends State<HomeScreen> {
                       },
                     ),
                   ),
+                  SizedBox(height: 38),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: Text(
+                      "New movies",
+                      style: TextStyle(
+                        color: Constants.kWhiteColor,
+                        fontSize: 17,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 37),
+                  SizedBox(
+                    height: 160,
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: newMovies.length,
+                      itemBuilder: (context, index) {
+                        // String mask;
+                        // if (index == 0) {
+                        //   // mask = Constants;
+                        // } else if (index == newMovies.length) {
+                        //   // mask = Constants;
+                        // } else {
+                        //   // mask = Constants;
+                        // }
+                        return GestureDetector(
+                          child: Container(
+                            margin:
+                                EdgeInsets.only(left: index == 0 ? 20.0 : 10),
+                            height: 160,
+                            width: 142,
+                            child:
+                                // SizedBox(),
+                                // Image.asset(
+                                //     "assets/images/The_load_of_the_rings_fellowship_2.jpg"),
+                                MaskedImage(
+                              asset: newMovies[index].image,
+                              mask: "assets/images/house_of_secrets_1.jpg",
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
                   SizedBox(height: 16),
                 ],
               ),
